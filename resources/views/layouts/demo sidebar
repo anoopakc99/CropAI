@@ -1,0 +1,103 @@
+<div class="sidebar" style="background-color: #f9f9f9; width: 260px; height: 100%; overflow-y: auto; box-shadow: 1px 0 5px rgba(0,0,0,0.1);">
+    <div class="logo-container" style="padding: 20px 0; text-align: center;">
+        <img src="{{ asset('logo/log.png') }}" alt="CropNet Logo" style="max-width: 80%;">
+    </div>
+    
+    <div class="sidebar-menu">
+        <a href="{{ url('admin/dashboard') }}" class="menu-item {{ request()->is('admin/dashboard') ? 'active' : '' }}" 
+           style="display: flex; align-items: center; padding: 12px 15px; margin: 5px 10px; border-radius: 5px; text-decoration: none; color: #555; {{ request()->is('admin/dashboard') ? 'background-color: #4CAF50; color: white;' : '' }}" onclick="window.location.href='{{ url('admin/dashboard') }}'">
+            <div class="menu-icon" style="margin-right: 12px; width: 20px; text-align: center;">
+                <i class="fas fa-th-large" style="{{ request()->is('admin/dashboard') ? 'color: white;' : 'color: #4CAF50;' }}"></i>
+            </div>
+            <div style="font-size: 14px;">Dashboard</div>
+        </a>
+        
+        <a href="{{ url('admin/pre-field-prep') }}" class="menu-item {{ request()->is('admin/pre-field-prep') ? 'active' : '' }}"
+           style="display: flex; align-items: center; padding: 12px 15px; margin: 5px 10px; border-radius: 5px; text-decoration: none; color: #555; {{ request()->is('admin/pre-field-prep') ? 'background-color: #4CAF50; color: white;' : '' }}" onclick="window.location.href='{{ url('admin/pre-field-prep') }}'">
+            <div class="menu-icon" style="margin-right: 12px; width: 20px; text-align: center;">
+                <i class="fas fa-seedling" style="{{ request()->is('admin/pre-field-prep') ? 'color: white;' : 'color: #4CAF50;' }}"></i>
+            </div>
+            <div style="font-size: 14px;">Pre field Prep. of Land</div>
+        </a>
+        
+        <a href="{{ url('admin/pre-irrigation') }}" class="menu-item {{ request()->is('admin/pre-irrigation') ? 'active' : '' }}"
+           style="display: flex; align-items: center; padding: 12px 15px; margin: 5px 10px; border-radius: 5px; text-decoration: none; color: #555; {{ request()->is('admin/pre-irrigation') ? 'background-color: #4CAF50; color: white;' : '' }}" onclick="window.location.href='{{ url('admin/pre-irrigation') }}'">
+            <div class="menu-icon" style="margin-right: 12px; width: 20px; text-align: center;">
+                <i class="fas fa-tint" style="{{ request()->is('admin/pre-irrigation') ? 'color: white;' : 'color: #4CAF50;' }}"></i>
+            </div>
+            <div style="font-size: 14px;">Pre Irrigation</div>
+        </a>
+        
+        <a href="{{ url('admin/irrigation') }}" class="menu-item {{ request()->is('admin/irrigation') ? 'active' : '' }}"
+           style="display: flex; align-items: center; padding: 12px 15px; margin: 5px 10px; border-radius: 5px; text-decoration: none; color: #555; {{ request()->is('admin/irrigation') ? 'background-color: #4CAF50; color: white;' : '' }}" onclick="window.location.href='{{ url('admin/irrigation') }}'">
+            <div class="menu-icon" style="margin-right: 12px; width: 20px; text-align: center;">
+                <i class="fas fa-water" style="{{ request()->is('admin/irrigation') ? 'color: white;' : 'color: #4CAF50;' }}"></i>
+            </div>
+            <div style="font-size: 14px;">Irrigation</div>
+        </a>
+        
+        <a href="{{ url('admin/field-preparation') }}" class="menu-item {{ request()->is('admin/field-preparation') ? 'active' : '' }}"
+           style="display: flex; align-items: center; padding: 12px 15px; margin: 5px 10px; border-radius: 5px; text-decoration: none; color: #555; {{ request()->is('admin/field-preparation') ? 'background-color: #4CAF50; color: white;' : '' }}" onclick="window.location.href='{{ url('admin/field-preparation') }}'">
+            <div class="menu-icon" style="margin-right: 12px; width: 20px; text-align: center;">
+                <i class="fas fa-tractor" style="{{ request()->is('admin/field-preparation') ? 'color: white;' : 'color: #4CAF50;' }}"></i>
+            </div>
+            <div style="font-size: 14px;">Field Preparation</div>
+        </a>
+        
+        <a href="{{ url('admin/sowing') }}" class="menu-item {{ request()->is('admin/sowing') ? 'active' : '' }}"
+           style="display: flex; align-items: center; padding: 12px 15px; margin: 5px 10px; border-radius: 5px; text-decoration: none; color: #555; {{ request()->is('admin/sowing') ? 'background-color: #4CAF50; color: white;' : '' }}" onclick="window.location.href='{{ url('admin/sowing') }}'">
+            <div class="menu-icon" style="margin-right: 12px; width: 20px; text-align: center;">
+                <i class="fas fa-leaf" style="{{ request()->is('admin/sowing') ? 'color: white;' : 'color: #4CAF50;' }}"></i>
+            </div>
+            <div style="font-size: 14px;">Sowing</div>
+        </a>
+        
+        <a href="{{ url('admin/fertilizers') }}" class="menu-item {{ request()->is('admin/fertilizers') ? 'active' : '' }}"
+           style="display: flex; align-items: center; padding: 12px 15px; margin: 5px 10px; border-radius: 5px; text-decoration: none; color: #555; {{ request()->is('admin/fertilizers') ? 'background-color: #4CAF50; color: white;' : '' }}" onclick="window.location.href='{{ url('admin/fertilizers') }}'">
+            <div class="menu-icon" style="margin-right: 12px; width: 20px; text-align: center;">
+                <i class="fas fa-flask" style="{{ request()->is('admin/fertilizers') ? 'color: white;' : 'color: #4CAF50;' }}"></i>
+            </div>
+            <div style="font-size: 14px;">Fertilizers</div>
+        </a>
+        
+        <a href="{{ url('admin/crop-protection') }}" class="menu-item {{ request()->is('admin/crop-protection') ? 'active' : '' }}"
+           style="display: flex; align-items: center; padding: 12px 15px; margin: 5px 10px; border-radius: 5px; text-decoration: none; color: #555; {{ request()->is('admin/crop-protection') ? 'background-color: #4CAF50; color: white;' : '' }}" onclick="window.location.href='{{ url('admin/crop-protection') }}'">
+            <div class="menu-icon" style="margin-right: 12px; width: 20px; text-align: center;">
+                <i class="fas fa-shield-alt" style="{{ request()->is('admin/crop-protection') ? 'color: white;' : 'color: #4CAF50;' }}"></i>
+            </div>
+            <div style="font-size: 14px;">Crop Protection</div>
+        </a>
+        
+        <a href="{{ url('admin/yield-company') }}" class="menu-item {{ request()->is('admin/yield-company') ? 'active' : '' }}"
+           style="display: flex; align-items: center; padding: 12px 15px; margin: 5px 10px; border-radius: 5px; text-decoration: none; color: #555; {{ request()->is('admin/yield-company') ? 'background-color: #4CAF50; color: white;' : '' }}" onclick="window.location.href='{{ url('admin/yield-company') }}'">
+            <div class="menu-icon" style="margin-right: 12px; width: 20px; text-align: center;">
+                <i class="fas fa-chart-line" style="{{ request()->is('admin/yield-company') ? 'color: white;' : 'color: #4CAF50;' }}"></i>
+            </div>
+            <div style="font-size: 14px;">Yield Company</div>
+        </a>
+        
+        <a href="{{ url('admin/growth-monitoring') }}" class="menu-item {{ request()->is('admin/growth-monitoring') ? 'active' : '' }}"
+           style="display: flex; align-items: center; padding: 12px 15px; margin: 5px 10px; border-radius: 5px; text-decoration: none; color: #555; {{ request()->is('admin/growth-monitoring') ? 'background-color: #4CAF50; color: white;' : '' }}" onclick="window.location.href='{{ url('admin/growth-monitoring') }}'">
+            <div class="menu-icon" style="margin-right: 12px; width: 20px; text-align: center;">
+                <i class="fas fa-chart-bar" style="{{ request()->is('admin/growth-monitoring') ? 'color: white;' : 'color: #4CAF50;' }}"></i>
+            </div>
+            <div style="font-size: 14px;">Growth Monitoring</div>
+        </a>
+        
+        <a href="{{ url('admin/harvest') }}" class="menu-item {{ request()->is('admin/harvest') ? 'active' : '' }}"
+           style="display: flex; align-items: center; padding: 12px 15px; margin: 5px 10px; border-radius: 5px; text-decoration: none; color: #555; {{ request()->is('admin/harvest') ? 'background-color: #4CAF50; color: white;' : '' }}" onclick="window.location.href='{{ url('admin/harvest') }}'">
+            <div class="menu-icon" style="margin-right: 12px; width: 20px; text-align: center;">
+                <i class="fas fa-leaf" style="{{ request()->is('admin/harvest') ? 'color: white;' : 'color: #4CAF50;' }}"></i>
+            </div>
+            <div style="font-size: 14px;">Harvest</div>
+        </a>
+        
+        <a href="{{ url('logout') }}" class="menu-item"
+           style="display: flex; align-items: center; padding: 12px 15px; margin: 5px 10px; border-radius: 5px; text-decoration: none; color: #555;" onclick="window.location.href='{{ url('logout') }}'">
+            <div class="menu-icon" style="margin-right: 12px; width: 20px; text-align: center;">
+                <i class="fas fa-sign-out-alt" style="color: #4CAF50;"></i>
+            </div>
+            <div style="font-size: 14px;"><strong>Logout</strong></div>
+        </a>
+    </div>
+</div>

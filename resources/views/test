@@ -1,0 +1,381 @@
+   <!-- Left Sidebar -->
+   <div class="sidebar">
+    <div class="logo-container">
+        <img src="{{ asset('logo/log.png') }}" alt="CropNet Logo" class="logo">
+    </div>
+    
+    <div class="sidebar-menu">
+        <div class="menu-item active" data-url="{{ url('admin/dashboard') }}">
+            <div class="menu-icon">
+                <i class="fas fa-th-large"></i>
+            </div>
+            <div>Dashboard</div>
+        </div>
+        <div class="menu-item" data-url="{{ url('admin/pre-field-prep') }}">
+            <div class="menu-icon">
+                <i class="fas fa-seedling"></i>
+            </div>
+            <div>Pre field Prep. af Land</div>
+        </div>
+        <div class="menu-item" data-url="{{ url('admin/pre-irrigation') }}">
+            <div class="menu-icon">
+                <i class="fas fa-tint"></i>
+            </div>
+            <div>Pre Irrigation</div>
+        </div>
+        <div class="menu-item" data-url="{{ url('admin/irrigation') }}">
+            <div class="menu-icon">
+                <i class="fas fa-water"></i>
+            </div>
+            <div>Irrigation</div>
+        </div>
+        <div class="menu-item" data-url="{{ url('admin/field-preparation') }}">
+            <div class="menu-icon">
+                <i class="fas fa-tractor"></i>
+            </div>
+            <div>Field Preparation</div>
+        </div>
+        <div class="menu-item" data-url="{{ url('admin/sowing') }}">
+            <div class="menu-icon">
+                <i class="fas fa-leaf"></i>
+            </div>
+            <div>Sowing</div>
+        </div>
+        <div class="menu-item" data-url="{{ url('admin/fertilizers') }}">
+            <div class="menu-icon">
+                <i class="fas fa-flask"></i>
+            </div>
+            <div>Fertilizers</div>
+        </div>
+        <div class="menu-item" data-url="{{ url('admin/crop-protection') }}">
+            <div class="menu-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <div>Crop Protection</div>
+        </div>
+        <div class="menu-item" data-url="{{ url('admin/yield-company') }}">
+            <div class="menu-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div>Yield Company</div>
+        </div>
+        <div class="menu-item" data-url="{{ url('admin/growth-monitoring') }}">
+            <div class="menu-icon">
+                <i class="fas fa-chart-bar"></i>
+            </div>
+            <div>Growth Monitoring</div>
+        </div>
+        <div class="menu-item" data-url="{{ url('admin/harvest') }}">
+            <div class="menu-icon">
+                <i class="fas fa-truck-loading"></i>
+            </div>
+            <div>Harvest</div>
+        </div>
+    <div class="menu-item" data-url="{{ url('logout') }}">
+        <div class="menu-icon">
+            <i class="fas fa-sign-out-alt"></i>
+        </div>
+        <div><strong>Logout</strong></div>
+    </div>
+    </div>
+</div>
+
+
+header 
+
+<div class="header">
+    <div class="dashboard-title">
+        <div class="dashboard-icon">
+            <i class="fas fa-th-large"></i>
+        </div>
+        <div class="dashboard-text">Dashboard</div>
+    </div>
+    
+    <div class="user-info">
+        <div class="login-info">Last Login 2005-02-18 06:30:00</div>
+        <div class="user-avatar">
+            <i class="fas fa-user"></i>
+        </div>
+        <div class="user-avatar">
+            <i class="fas fa-cog"></i>
+        </div>
+    </div>
+</div>
+
+___body
+
+<div class="content-grid">
+    <!-- Banner -->
+    <div class="banner" style="width: 745px;  border-radius: 10px; background-color: #2F5E07;">
+        <div class="banner-content">
+            <div class="banner-title">Seamless Farm-to-Fork Management with End-to-End Traceability!</div>
+            <div class="banner-description">Our system helps you to manage Farms, Harvests, Inventory, Customer Order, Process and Dispatch in order to provides traceability across supply chain.</div>
+        </div>
+        <img src="{{ asset('dashboard/farmer.png') }}" alt="Farmer with phone" class="banner-image">
+    </div>
+    
+    <!-- Left Column -->
+    <div class="left-column">
+        <!-- Weather Widget -->
+        <div class="weather-widget">
+            <div class="weather-header">
+                <div class="location">
+                    <div class="location-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="location-details">
+                        <div class="location-name">Lucknow</div>
+                        <div class="location-day">Monday</div>
+                    </div>
+                </div>
+                
+                <div class="time-filter">
+                    <div class="time-option active">24 hours</div>
+                    <div class="time-option">Weekly</div>
+                </div>
+            </div>
+            
+            <div class="temperature-display">
+                <div class="main-temp">21°C</div>
+                <div class="weather-icon">
+                    <img src="https://via.placeholder.com/40x40" alt="Weather" class="weather-icon-img">
+                </div>
+            </div>
+            
+            <div class="weather-metrics">
+                <div class="metric">
+                    <div class="metric-icon">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <div class="metric-value">22°C</div>
+                    <div class="metric-label">Soil Temp.</div>
+                </div>
+                
+                <div class="metric">
+                    <div class="metric-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <div class="metric-value">28%</div>
+                    <div class="metric-label">Humidity</div>
+                </div>
+                
+                <div class="metric">
+                    <div class="metric-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <div class="metric-value">4m/s</div>
+                    <div class="metric-label">Wind</div>
+                </div>
+                
+                <div class="metric">
+                    <div class="metric-icon">
+                        <i class="fas fa-cloud-rain"></i>
+                    </div>
+                    <div class="metric-value">0</div>
+                    <div class="metric-label">Precipitation</div>
+                </div>
+            </div>
+            
+            <div class="sun-timeline">
+                <div class="timeline-arc"></div>
+                <div class="sun-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="timeline-times">
+                    <div class="time-point">
+                        <div>7:00 am</div>
+                        <div>SunShine</div>
+                    </div>
+                    <div class="time-point">
+                        <div>8:00pm</div>
+                        <div>Sun Set</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Farmer Registration Chart -->
+        <div class="chart-container">
+            <div class="chart-title">Registered Farmer</div>
+            <div class="chart-wrapper">
+                <div class="chart">
+                    <div class="chart-bar green" style="height: 30%;"></div>
+                    <div class="chart-bar yellow" style="height: 40%;"></div>
+                    <div class="chart-bar green" style="height: 70%;"></div>
+                    <div class="chart-bar yellow" style="height: 85%;"></div>
+                    <div class="chart-bar green" style="height: 70%;"></div>
+                    <div class="chart-bar yellow" style="height: 50%;"></div>
+                    <div class="chart-bar green" style="height: 70%;"></div>
+                    <div class="chart-bar yellow" style="height: 40%;"></div>
+                    <div class="chart-bar green" style="height: 35%;"></div>
+                    <div class="chart-bar yellow" style="height: 60%;"></div>
+                    <div class="chart-bar green" style="height: 80%;"></div>
+                    <div class="chart-bar yellow" style="height: 70%;"></div>
+                </div>
+            </div>
+            <div class="chart-labels">
+                <span>Jan</span>
+                <span>Feb</span>
+                <span>Mar</span>
+                <span>Apr</span>
+                <span>May</span>
+                <span>Jun</span>
+                <span>Jul</span>
+                <span>Aug</span>
+                <span>Sept</span>
+                <span>Oct</span>
+                <span>Nov</span>
+                <span>Dec</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Right Column -->
+    <div class="right-column">
+        <!-- Stats Cards -->
+        <div class="stats-container" style="margin-top: -202px;">
+            <div class="stat-card">
+                <div class="stat-title">User</div>
+                <div class="stat-content">
+                    <div class="stat-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="stat-value">9</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-title">Fertilizer Stock</div>
+                <div class="stat-content">
+                    <div class="stat-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="stat-value">5</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-title">Crops</div>
+                <div class="stat-content">
+                    <div class="stat-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="stat-value">82</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-title">Machines</div>
+                <div class="stat-content">
+                    <div class="stat-icon">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <div class="stat-value">5</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Weekly Schedule -->
+        <div class="weekly-container">
+            <div class="weekly-title"><strong>Upcoming Week</strong></div>
+            <div class="days-container">
+                <div class="day-item">
+                    <div class="day-name">Mon</div>
+                    <div class="day-indicator green"></div>
+                    <div class="day-status">Pending</div>
+                </div>
+                
+                <div class="day-item">
+                    <div class="day-name">Tue</div>
+                    <div class="day-indicator green"></div>
+                    <div class="day-status">Completed</div>
+                </div>
+                
+                <div class="day-item">
+                    <div class="day-name">Wed</div>
+                    <div class="day-indicator green"></div>
+                    <div class="day-status">On it</div>
+                </div>
+                
+                <div class="day-item">
+                    <div class="day-name">Thurs</div>
+                    <div class="day-indicator yellow"></div>
+                    <div class="day-status">Assigned</div>
+                </div>
+                
+                <div class="day-item">
+                    <div class="day-name">Fri</div>
+                    <div class="day-indicator yellow"></div>
+                    <div class="day-status">Assigned</div>
+                </div>
+                
+                <div class="day-item">
+                    <div class="day-name">Sat</div>
+                    <div class="day-indicator yellow"></div>
+                    <div class="day-status">Assigned</div>
+                </div>
+                
+                <div class="day-item">
+                    <div class="day-name">Sun</div>
+                    <div class="day-indicator yellow"></div>
+                    <div class="day-status">Assigned</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tasks-container">
+            <div class="tasks-title"><strong>Current Tasks</strong></div>
+            <div class="task-list">
+                <div class="task-item">
+                    <div class="task-badge yellow">Super wiser Name</div>
+                    <div class="task-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</div>
+                </div>
+                
+                <div class="task-item">
+                    <div class="task-badge green">Super wiser Name</div>
+                    <div class="task-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</div>
+                </div>
+                
+                <div class="task-item">
+                    <div class="task-badge orange">Super wiser Name</div>
+                    <div class="task-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Farmer Categories -->
+        <div class="categories-container">
+            <div class="category-card">
+                <div class="category-title"><strong>Farmer Category</strong></div>
+                <div class="category-legend">
+                    <div class="legend-item">
+                        <div class="legend-color green"></div>
+                        <div>Dirkar Farmer</div>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color yellow"></div>
+                        <div>Non Dirkar Farmer</div>
+                    </div>
+                </div>
+                <div class="pie-chart"></div>
+            </div>
+            
+            <div class="category-card">
+                <div class="category-title"><strong>Farmer Type</strong></div>
+                <div class="category-legend">
+                    <div class="legend-item">
+                        <div class="legend-color green"></div>
+                        <div>Dirkar Farmer</div>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color yellow"></div>
+                        <div>Non Dirkar Farmer</div>
+                    </div>
+                </div>
+                <div class="donut-chart">
+                    <div class="donut-inner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

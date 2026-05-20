@@ -1,0 +1,1178 @@
+/* Reset and Base Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .banner {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .weekly-container,
+    .tasks-container,
+    .categories-container {
+        margin-top: 20px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #f6f6f6;
+}
+
+/* Main Layout */
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Left Sidebar */
+.sidebar {
+    width: 280px;
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo-container {
+    padding: 0 25px 20px 25px;
+}
+
+.logo {
+    width: 160px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 7px 25px;
+    cursor: pointer;
+    color: #777;
+    font-size: 15px;
+}
+
+.menu-item.active {
+    background-color: #667E06;
+    color: white;
+}
+
+.menu-icon {
+    width: 22px;
+    margin-right: 12px;
+    text-align: center;
+    color: #667E06;
+}
+
+.menu-item.active .menu-icon {
+    color: white;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 20px 25px;
+}
+
+/* Top Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@media print,
+projection {
+    .container-block {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+    }
+
+    .table th,
+    .table td {
+        border: 1px solid #000 !important;
+    }
+}
+
+.container-block {
+    width: 109%;
+    overflow-x: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    /* add a clear border if needed */
+    box-shadow: none;
+    /* optional: avoid cutting in export */
+}
+
+.dashboard-title {
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-icon {
+    color: #667E06;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.dashboard-text {
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.login-info {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #667E06;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #667E06;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Dashboard Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+/* Banner Section */
+.banner {
+    grid-column: 1 / -1;
+    background-color: #5fa364;
+    height: 166px;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background-image: url('dashboard/farmer.png');
+    background-size: cover;
+}
+
+.banner-content {
+    padding: 25px;
+    width: 65%;
+    color: white;
+}
+
+.banner-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.banner-description {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.banner-image {
+    position: absolute;
+    right: 20px;
+    bottom: 18px;
+    ;
+    height: 130px;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Stats Cards */
+.stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-title {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.stat-content {
+    display: flex;
+    align-items: center;
+}
+
+.stat-icon {
+    width: 52px;
+    height: 52px;
+    background-color: rgba(76, 175, 80, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: #667E06;
+    font-size: 22px;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: 600;
+    color: #667E06;
+}
+
+/* Weather Widget */
+.weather-widget {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.weather-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.location {
+    display: flex;
+    align-items: flex-start;
+}
+
+.location-icon {
+    color: #777;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+
+.location-details {
+    font-size: 14px;
+}
+
+.location-name {
+    font-weight: 500;
+}
+
+.location-day {
+    color: #999;
+    font-size: 12px;
+}
+
+.time-filter {
+    display: flex;
+    border-radius: 30px;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.time-option {
+    padding: 4px 10px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.time-option.active {
+    background-color: #667E06;
+    color: white;
+}
+
+.temperature-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main-temp {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.weather-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #d1efff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-icon-img {
+    width: 40px;
+    height: 40px;
+}
+
+.weather-metrics {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.metric-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.metric-value {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.metric-label {
+    color: #999;
+    font-size: 12px;
+}
+
+.sun-timeline {
+    height: 90px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.timeline-arc {
+    height: 50px;
+    width: 100%;
+    border-top: 1px dashed #ddd;
+    border-radius: 100% 100% 0 0;
+}
+
+.sun-icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 30px;
+    height: 30px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFA500;
+}
+
+.timeline-times {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.time-point {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+}
+
+/* Farmer Registration Chart */
+.chart-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+}
+
+.chart-title {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.chart {
+    height: 180px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 0 10px 0;
+}
+
+.chart-bar {
+    width: 20px;
+    border-radius: 3px 3px 0 0;
+}
+
+.chart-bar.green {
+    background-color: #667E06;
+}
+
+.chart-bar.yellow {
+    background-color: #FFD700;
+}
+
+.chart-labels {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    color: #777;
+    font-size: 12px;
+}
+
+/* Weekly Schedule */
+.weekly-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+}
+
+.weekly-title {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.days-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.day-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.day-name {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.day-indicator {
+    width: 36px;
+    height: 56px;
+    border-radius: 45%;
+    margin-bottom: 5px;
+}
+
+.day-indicator.green {
+    background-color: #667E06;
+}
+
+.day-indicator.yellow {
+    background-color: #FFD700;
+}
+
+.day-status {
+    color: #888;
+    font-size: 12px;
+}
+
+/* Tasks Section */
+.tasks-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+}
+
+.tasks-title {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-item {
+    display: flex;
+    gap: 15px;
+}
+
+.task-badge {
+    min-width: 80px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 11px;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 0 5px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.task-badge.yellow {
+    background-color: #FFD700;
+}
+
+.task-badge.green {
+    background-color: #667E06;
+}
+
+.task-badge.orange {
+    background-color: #FF7043;
+}
+
+.task-text {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.4;
+    flex: 1;
+}
+
+/* Farmer Categories */
+.categories-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.category-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.category-title {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.category-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #555;
+}
+
+.legend-color {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+}
+
+.legend-color.green {
+    background-color: #667E06;
+}
+
+.legend-color.yellow {
+    background-color: #FFD700;
+}
+
+.pie-chart {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: conic-gradient(#667E06 0% 70%, #FFD700 70% 100%);
+}
+
+.donut-chart {
+    width: 143px;
+    height: 143px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: conic-gradient(#667E06 0% 70%, #FFD700 70% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donut-inner {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+/* Chart axis */
+.chart-y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 180px;
+    position: absolute;
+    left: 0;
+}
+
+.chart-y-label {
+    font-size: 10px;
+    color: #888;
+}
+
+.chart-container {
+    position: relative;
+}
+
+.chart-wrapper {
+    margin-left: 30px;
+}
+
+/* Action buttons at bottom */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.action-button {
+    padding: 10px 15px;
+    background-color: #667E06;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.action-button.secondary {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+
+/* MASTER MENUES SECTION */
+/* Main Menu Styling */
+.master-toggle {
+    background-color: #5a7d1a;
+    /* Green Shade */
+    color: white !important;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+/* .master-toggle:hover, .master-toggle:focus {
+    background-color: #667E06;
+} */
+
+/* Submenu Styling */
+.master-link {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    color: #666;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.master-link:hover {
+    background-color: #d5e8b5;
+    /* Light Green Shade */
+    color: #667E06 !important;
+}
+
+/* Active State */
+.master-link.active {
+    background-color: #667E06 !important;
+    color: white !important;
+}
+
+/* Active Icon Color Change */
+.master-link.active i {
+    color: white !important;
+}
+
+
+/* PAGE ON TABLE AND CARD */
+/* Custom Styling */
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    /* Ensures corners apply properly */
+}
+
+/* Table Header */
+.table thead th {
+    background-color: #6b8e23 !important;
+    color: white;
+    padding: 12px;
+    font-size: 14px;
+}
+
+/* Apply border-radius to the first and last header cells */
+.table thead th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.table thead th:last-child {
+    border-top-right-radius: 12px;
+}
+
+/* Alternate row color */
+.table tbody tr:nth-child(even) {
+    background-color: #20a568 !important
+}
+
+/* Set row height */
+.table tbody tr {
+    height: 45px;
+}
+
+/* Round the bottom corners */
+.table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+
+.input-group input {
+    font-size: 14px;
+    padding: 10px;
+}
+
+.input-group-text i {
+    font-size: 16px;
+}
+
+/* Smaller & Consistent Cards */
+.info-card {
+    width: 255px;
+    /* Adjust width */
+    height: 100px;
+    /* Reduced height */
+    background-color: white;
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 2px 2px 8px rgba(212, 207, 207, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-card img {
+    width: 40px;
+    /* Smaller image */
+    height: 40px;
+    object-fit: contain;
+}
+
+.card-title {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #333;
+}
+
+.count {
+    font-size: 15px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Ensure spacing between cards */
+.d-flex .info-card {
+    margin: 4px;
+}
+
+/* Define the original olive-green color */
+:root {
+    --custom-green: #6b8110;
+}
+
+/* Common Styles for Both Elements */
+.custom-select,
+.custom-button {
+    background-color: var(--custom-green);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.custom-select:hover,
+.custom-button:hover {
+    background-color: #56660d;
+    /* Darker shade on hover */
+}
+
+/* Focus State for Select */
+.custom-select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Change background to white when an option is selected */
+.custom-select option:checked {
+    background-color: white;
+    color: black;
+}
+
+.btn-add {
+    background-color: #6b8e23;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: none;
+}
+
+
+
+th {
+    white-space: nowrap;
+    vertical-align: middle;
+    background: #6b8110;
+    /* table-success ka color manually set kar diya */
+}
+
+/* General container for the entire page content */
+.container-block {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    /* Added some margin at the bottom */
+}
+
+/* Form styling for filters and search */
+.form-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.form-inline .left-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-inline .right-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Custom select styling (from your provided code) */
+.form-select.custom-select {
+    background-color: white;
+    color: #4c6e16;
+    min-width: 200px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    /* Fully rounded corners */
+    border: 1px solid #4c6e16;
+    appearance: none;
+    /* Remove default arrow styling */
+    text-align: center;
+    /* Align text center */
+}
+
+.form-select.custom-select option {
+    background-color: white;
+    color: #4c6e16;
+    text-align: center;
+}
+
+.form-select.custom-select option:hover {
+    background-color: #4c6e16;
+    color: white;
+}
+
+.form-select.custom-select option:checked {
+    background-color: #4c6e16;
+    color: white;
+}
+
+/* Optional: Fix for some browsers where :hover doesn't apply to <option> */
+select:focus>option:checked {
+    background-color: #4c6e16;
+    color: white;
+}
+
+/* Search box styling (from your provided code) */
+.search-box {
+    width: 250px;
+}
+
+.input-group.rounded-pill .form-control {
+    border-top-left-radius: 50px !important;
+    border-bottom-left-radius: 50px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.input-group.rounded-pill .btn {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: 50px !important;
+    border-bottom-right-radius: 50px !important;
+    background-color: transparent !important;
+    /* Ensure background is transparent */
+}
+
+
+/* Table specific styles to match image_c16bc7.png */
+.table {
+    width: 100%;
+    /* Ensure table takes full width */
+    border-collapse: collapse;
+    /* Ensure borders are collapsed */
+    border: 1px solid #dee2e6;
+    /* Overall table border */
+    margin-bottom: 0;
+    /* Remove default bottom margin if not needed */
+}
+
+/* Header styling (from your provided code for thead) */
+.table thead {
+    background-color: #4c6e16;
+    /* Green background as per screenshot */
+    color: white;
+    font-weight: bold;
+}
+
+/* Ensure text in headers is centered */
+.table thead th {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    /* Consistent padding */
+}
+
+/* Alternating row colors (from your provided code for tbody) */
+.table tbody tr:nth-child(even) {
+    background-color: #f0f7e0;
+    /* Light green for even rows */
+}
+
+/* Default row colors for odd rows */
+.table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+    /* White for odd rows */
+}
+
+/* Cell styling, crucial for borders */
+.table th,
+.table td {
+    vertical-align: middle;
+    text-align: center;
+    /* Default text alignment for data cells */
+    padding: 10px;
+    /* Consistent padding */
+    border: 1px solid #dee2e6;
+    /* All cell borders */
+}
+
+/* Pagination styling */
+.pagination {
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Blinking text for highlights (from previous code) */
+.blinking-text {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+/* --- Summary row styles (from previous code) --- */
+
+/* Style for the main section headers (e.g., "HARVESTING PRODUCTION SUMMARY") */
+.section-header-row {
+    border-top: 2px solid #ccc !important;
+    border-bottom: 1px solid #ccc !important;
+    background-color: #f8f8f8 !important;
+    color: #333 !important;
+    font-weight: bold;
+}
+
+.section-header-row h4 {
+    margin-bottom: 0;
+    padding: 5px 0;
+}
+
+/* Style for the actual summary total rows (e.g., "Total Production for Corn") */
+.summary-total-row {
+    background-color: #ffffff !important;
+    color: #333 !important;
+    font-weight: normal;
+    border-top: 1px solid #eee !important;
+    border-bottom: 1px solid #eee !important;
+}
+
+.summary-total-row td {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+
+.summary-total-row td.text-start {
+    text-align: left !important;
+}
+
+.summary-total-row td.text-end {
+    text-align: right !important;
+}
+
+/* Style for GRAND TOTAL rows within the summaries */
+.summary-total-row.grand-total {
+    background-color: #f2f2f2 !important;
+    color: #333 !important;
+    font-weight: bold;
+    border-top: 2px solid #ccc !important;
+    border-bottom: 2px solid #ccc !important;
+}
+
+/* Additional style for the new "Export to CSV" button */
+.btn-export-csv {
+    background-color: #17a2b8;
+    /* Bootstrap info color */
+    border-color: #17a2b8;
+    color: white;
+}
+
+.btn-export-csv:hover {
+    background-color: #138496;
+    border-color: #138496;
+}
+
+.table-container {
+    max-height: 400px;
+    /* Set your desired height */
+    overflow-y: auto;
+    overflow-x: auto;
+    border: 1px solid #dee2e6;
+}
+
+
+
+.table thead th {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 2;
+    padding: 8px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+.table td {
+    padding: 8px;
+    border: 1px solid #dee2e6;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background: #f5f5f5;
+    z-index: 2;
+}
+
+.table th,
+.table td {
+    border-left: 1px solid #dee2e6;
+}
+
+.table tr td:first-child,
+.table tr th:first-child {
+    border-left: none !important;
+}

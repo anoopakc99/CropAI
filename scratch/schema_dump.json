@@ -1,0 +1,2869 @@
+{
+    "tables": {
+        "area_levelings": [
+            {
+                "field": "id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "PRI",
+                "default": null
+            },
+            {
+                "field": "block_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "plot_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "machine_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "tractor_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area_leveling",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hsd_consumption",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hsd_cost",
+                "type": "decimal(10,2)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "date",
+                "type": "varchar(20)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "time_hrs",
+                "type": "double(5,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "start_time",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "end_time",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "category_id",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manpower_type",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "unskilled",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_1",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_2",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_maintenance",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_cost",
+                "type": "int(10)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "total_cost",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "created_at",
+                "type": "timestamp",
+                "null": "NO",
+                "key": "",
+                "default": "0000-00-00 00:00:00"
+            },
+            {
+                "field": "updated_at",
+                "type": "timestamp",
+                "null": "NO",
+                "key": "",
+                "default": "0000-00-00 00:00:00"
+            },
+            {
+                "field": "user_id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "site_id",
+                "type": "bigint(10)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manual_season",
+                "type": "enum('Kharif','Rabi','Zaid')",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "season_id",
+                "type": "int(100)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hours_used",
+                "type": "float",
+                "null": "YES",
+                "key": "",
+                "default": null
+            }
+        ],
+        "pre_land_preparation": [
+            {
+                "field": "id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "PRI",
+                "default": null
+            },
+            {
+                "field": "block_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "plot_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "machine_id",
+                "type": "varchar(250)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "tractor_id",
+                "type": "varchar(25)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area_covered",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hsd_consumption",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "time_hrs",
+                "type": "double(5,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_cost",
+                "type": "int(10)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "date",
+                "type": "datetime",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "start_time",
+                "type": "time",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "end_time",
+                "type": "time",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hours_used",
+                "type": "float",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "category_id",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manpower_type",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "unskilled",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_1",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_2",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_maintenance",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "total_cost",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "created_at",
+                "type": "timestamp",
+                "null": "NO",
+                "key": "",
+                "default": "current_timestamp()"
+            },
+            {
+                "field": "updated_at",
+                "type": "timestamp",
+                "null": "NO",
+                "key": "",
+                "default": "0000-00-00 00:00:00"
+            },
+            {
+                "field": "user_id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "site_id",
+                "type": "int(11)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manual_season",
+                "type": "enum('Kharif','Rabi','Zaid')",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "season_id",
+                "type": "int(100)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            }
+        ],
+        "pre_irrigation": [
+            {
+                "field": "id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "PRI",
+                "default": null
+            },
+            {
+                "field": "block_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "plot_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area",
+                "type": "decimal(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area_covered",
+                "type": "decimal(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "irrigation_no",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "irrigation_type_id",
+                "type": "bigint(20) unsigned",
+                "null": "YES",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "date",
+                "type": "date",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "water_source_id",
+                "type": "bigint(20) unsigned",
+                "null": "YES",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "capacity_id",
+                "type": "varchar(20)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "start_time",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "end_time",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hours_used",
+                "type": "decimal(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "capacity_lph",
+                "type": "decimal(12,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "water_used",
+                "type": "decimal(12,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "power_consumption_kw",
+                "type": "decimal(12,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "electricity_units",
+                "type": "decimal(12,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "cost_per_unit",
+                "type": "decimal(12,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "electricity_cost",
+                "type": "decimal(12,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manpower_category_id",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manpower_type",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "unskilled",
+                "type": "varchar(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_1",
+                "type": "varchar(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_2",
+                "type": "varchar(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_maintenance",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_cost",
+                "type": "int(10)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "total_cost",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "user_id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "site_id",
+                "type": "int(10)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manual_season",
+                "type": "enum('Kharif','Rabi','Zaid')",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "season_id",
+                "type": "int(100)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "created_at",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "updated_at",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            }
+        ],
+        "land_prepration": [
+            {
+                "field": "id",
+                "type": "int(10) unsigned",
+                "null": "NO",
+                "key": "PRI",
+                "default": null
+            },
+            {
+                "field": "block_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "plot_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "machine_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "tractor_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area_covered",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "soil_condition_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hsd_consumption",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "time_hrs",
+                "type": "double(5,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "start_time",
+                "type": "time",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "end_time",
+                "type": "time",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hours_used",
+                "type": "float",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "date",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "category_id",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manpower_type",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "unskilled",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_1",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_2",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_maintenance",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "total_cost",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "created_at",
+                "type": "timestamp",
+                "null": "NO",
+                "key": "",
+                "default": "current_timestamp()"
+            },
+            {
+                "field": "updated_at",
+                "type": "timestamp",
+                "null": "NO",
+                "key": "",
+                "default": "0000-00-00 00:00:00"
+            },
+            {
+                "field": "user_id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "site_id",
+                "type": "int(10)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manual_season",
+                "type": "enum('Kharif','Rabi','Zaid')",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "season_id",
+                "type": "int(100)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            }
+        ],
+        "showing_oprations": [
+            {
+                "field": "id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "PRI",
+                "default": null
+            },
+            {
+                "field": "block_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "plot_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area_covered",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "seed_id",
+                "type": "bigint(20) unsigned",
+                "null": "YES",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "variety",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "sowing_method_id",
+                "type": "bigint(20) unsigned",
+                "null": "YES",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "date",
+                "type": "date",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "seed_consumption",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "purpose_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "swowing_source_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "row_distance",
+                "type": "double(5,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "sowing_depth",
+                "type": "double(5,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "machine_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "tractor_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hsd_consumption",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "start_time",
+                "type": "time",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "end_time",
+                "type": "time",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hours_used",
+                "type": "float",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "time_hrs",
+                "type": "double(5,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "category_id",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manpower_type",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "unskilled",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_1",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_2",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_maintenance",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_cost",
+                "type": "float",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "total_cost",
+                "type": "decimal(10,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "user_id",
+                "type": "bigint(20) unsigned",
+                "null": "YES",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "site_id",
+                "type": "int(10)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manual_season",
+                "type": "enum('Kharif','Rabi','Zaid')",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "season_id",
+                "type": "int(100)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "created_at",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "updated_at",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "deleted_at",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            }
+        ],
+        "post_irrigation": [
+            {
+                "field": "id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "PRI",
+                "default": null
+            },
+            {
+                "field": "block_name",
+                "type": "varchar(255)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "plot_name",
+                "type": "varchar(255)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area",
+                "type": "decimal(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area_covered",
+                "type": "decimal(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "irrigation_no",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "irrigation_type_id",
+                "type": "bigint(20) unsigned",
+                "null": "YES",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "date",
+                "type": "date",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "water_source_id",
+                "type": "bigint(20)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "day_ofter_swowing",
+                "type": "date",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "capacity_id",
+                "type": "bigint(20)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "start_time",
+                "type": "time",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "end_time",
+                "type": "time",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hours_used",
+                "type": "decimal(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "capacity_lph",
+                "type": "decimal(12,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "water_used",
+                "type": "decimal(12,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "power_consumption_kw",
+                "type": "decimal(12,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "electricity_units",
+                "type": "decimal(12,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "cost_per_unit",
+                "type": "decimal(12,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "electricity_cost",
+                "type": "decimal(12,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manpower_category_id",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manpower_type",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "unskilled",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_1",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_2",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_maintenance",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_cost",
+                "type": "int(10)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "total_cost",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "user_id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "site_id",
+                "type": "int(10)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manual_season",
+                "type": "enum('Kharif','Rabi','Zaid')",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "season_id",
+                "type": "int(100)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "created_at",
+                "type": "timestamp",
+                "null": "NO",
+                "key": "",
+                "default": "current_timestamp()"
+            },
+            {
+                "field": "updated_at",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            }
+        ],
+        "fertilizer_soil_record": [
+            {
+                "field": "id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "PRI",
+                "default": null
+            },
+            {
+                "field": "block_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "plot_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area_covered",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "activity_type",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "fertilizer_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "fertilizer_quantity",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "uom",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "machine_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "tractor_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "hsd_consumption",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "start_time",
+                "type": "varchar(15)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "end_time",
+                "type": "varchar(15)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hours_used",
+                "type": "decimal(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "date",
+                "type": "varchar(20)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "category_id",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manpower_type",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "unskilled",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_1",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_2",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_maintenance",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_cost",
+                "type": "float",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "total_cost",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "created_at",
+                "type": "timestamp",
+                "null": "NO",
+                "key": "",
+                "default": "current_timestamp()"
+            },
+            {
+                "field": "updated_at",
+                "type": "timestamp",
+                "null": "NO",
+                "key": "",
+                "default": "0000-00-00 00:00:00"
+            },
+            {
+                "field": "user_id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "site_id",
+                "type": "int(10)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manual_season",
+                "type": "enum('Kharif','Rabi','Zaid')",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "season_id",
+                "type": "int(100)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            }
+        ],
+        "inter_culture": [
+            {
+                "field": "id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "PRI",
+                "default": null
+            },
+            {
+                "field": "block_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "plot_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area_covered",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "activity_type",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "date",
+                "type": "date",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "machine_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "tractor_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hsd_consumption",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "time_hrs",
+                "type": "double(5,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "start_time",
+                "type": "varchar(15)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "end_time",
+                "type": "varchar(15)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "category_id",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manpower_type",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "unskilled",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_1",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_2",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_maintenance",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_cost",
+                "type": "float",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "total_cost",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "created_at",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "updated_at",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "user_id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "site_id",
+                "type": "int(10)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manual_season",
+                "type": "enum('Kharif','Rabi','Zaid')",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "season_id",
+                "type": "int(100)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            }
+        ],
+        "crop_protection": [
+            {
+                "field": "id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "PRI",
+                "default": null
+            },
+            {
+                "field": "block_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "plot_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area_covered",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "machine_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "tractor_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hsd_consumption",
+                "type": "double",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hours_used",
+                "type": "double",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "application_method",
+                "type": "varchar(100)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "company",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "chemical_id",
+                "type": "varchar(20)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "dose",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "uom",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "application_stage_source",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "date",
+                "type": "date",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "start_time",
+                "type": "varchar(15)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "end_time",
+                "type": "varchar(15)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "category_id",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manpower_type",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "unskilled",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_1",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_2",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_maintenance",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_cost",
+                "type": "float",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "total_cost",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "user_id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "site_id",
+                "type": "int(10)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manual_season",
+                "type": "enum('Kharif','Rabi','Zaid')",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "season_id",
+                "type": "int(100)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "created_at",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "updated_at",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            }
+        ],
+        "harvestings": "Table does not exist: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pmmsanvp_ccbfsolution2.harvestings' doesn't exist",
+        "hay_making": [
+            {
+                "field": "id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "PRI",
+                "default": null
+            },
+            {
+                "field": "block_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "plot_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area_covered",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "seed_name",
+                "type": "varchar(20)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "seed_id",
+                "type": "int(10)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "yield_mt",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "total_yield_mt",
+                "type": "float",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "harvest_date",
+                "type": "date",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hay_making_method",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "machine_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "tractor_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hsd_consumption",
+                "type": "float",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "start_time",
+                "type": "varchar(15)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "end_time",
+                "type": "varchar(15)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hours_used",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "date",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "category_id",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manpower_type",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "unskilled",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_1",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_2",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_maintenance",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_cost",
+                "type": "float",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "total_cost",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "user_id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "site_id",
+                "type": "int(10)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manual_season",
+                "type": "enum('Kharif','Rabi','Zaid')",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "season_id",
+                "type": "int(100)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "created_at",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "updated_at",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            }
+        ],
+        "silage_making": [
+            {
+                "field": "id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "PRI",
+                "default": null
+            },
+            {
+                "field": "block_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "plot_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area_covered",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "seed_name",
+                "type": "varchar(20)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "seed_id",
+                "type": "int(10)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "yield_mt",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "total_yield_mt",
+                "type": "float",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "harvest_date",
+                "type": "date",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "silage_making_method",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "machine_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "tractor_id",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hsd_consumption",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "start_time",
+                "type": "varchar(15)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "end_time",
+                "type": "varchar(15)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "hours_used",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "date",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "category_id",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manpower_type",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "unskilled",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_1",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "semi_skilled_2",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_maintenance",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "major_cost",
+                "type": "float",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "total_cost",
+                "type": "int(11)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "user_id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "site_id",
+                "type": "int(10)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manual_season",
+                "type": "enum('Kharif','Rabi','Zaid')",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "season_id",
+                "type": "int(100)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "created_at",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "updated_at",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            }
+        ],
+        "activity_monitoring": [
+            {
+                "field": "id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "PRI",
+                "default": null
+            },
+            {
+                "field": "block_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "plot_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area",
+                "type": "double(8,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area_covered",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "activity_stage",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "leaf_condition",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "image_path",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "user_id",
+                "type": "bigint(20) unsigned",
+                "null": "YES",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "site_id",
+                "type": "int(10)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "manual_season",
+                "type": "enum('Kharif','Rabi','Zaid')",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "season_id",
+                "type": "int(100)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "created_at",
+                "type": "timestamp",
+                "null": "NO",
+                "key": "",
+                "default": "current_timestamp()"
+            },
+            {
+                "field": "updated_at",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            }
+        ],
+        "master_crops": "Table does not exist: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pmmsanvp_ccbfsolution2.master_crops' doesn't exist",
+        "crops": "Table does not exist: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pmmsanvp_ccbfsolution2.crops' doesn't exist",
+        "master_plots": [
+            {
+                "field": "id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "PRI",
+                "default": null
+            },
+            {
+                "field": "block_id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "MUL",
+                "default": null
+            },
+            {
+                "field": "plot_name",
+                "type": "varchar(255)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "area",
+                "type": "float",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "lattitude",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "longitude",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "created_at",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "updated_at",
+                "type": "timestamp",
+                "null": "YES",
+                "key": "",
+                "default": null
+            }
+        ],
+        "master_seed": [
+            {
+                "field": "id",
+                "type": "bigint(20) unsigned",
+                "null": "NO",
+                "key": "PRI",
+                "default": null
+            },
+            {
+                "field": "seed_name",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "seed_id",
+                "type": "int(100)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "seed_variety_id",
+                "type": "int(100)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "variety_of_seed",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "sowing_method",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "purpose",
+                "type": "enum('Fodder Crop','Cash Crop','Seed Crop')",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "type_of_packing",
+                "type": "varchar(255)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "packing_size",
+                "type": "varchar(255)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "date_of_packing",
+                "type": "date",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "seed_stock_kg",
+                "type": "decimal(10,2)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "rate_of_seed",
+                "type": "decimal(10,2)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "sale_price",
+                "type": "float",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "location",
+                "type": "varchar(255)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "remark",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "uom",
+                "type": "varchar(255)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "site_id",
+                "type": "int(10)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "production_type",
+                "type": "enum('Own Production','Purchase')",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "sowing_source",
+                "type": "varchar(255)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "is_deleted",
+                "type": "tinyint(1)",
+                "null": "YES",
+                "key": "",
+                "default": "0"
+            }
+        ],
+        "seed": [
+            {
+                "field": "id",
+                "type": "int(10)",
+                "null": "NO",
+                "key": "PRI",
+                "default": null
+            },
+            {
+                "field": "name",
+                "type": "varchar(250)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "status",
+                "type": "enum('active','inactive')",
+                "null": "YES",
+                "key": "",
+                "default": "active"
+            },
+            {
+                "field": "site_id",
+                "type": "int(10)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "created_at",
+                "type": "datetime",
+                "null": "YES",
+                "key": "",
+                "default": "current_timestamp()"
+            },
+            {
+                "field": "updated_at",
+                "type": "datetime",
+                "null": "YES",
+                "key": "",
+                "default": "current_timestamp()"
+            }
+        ],
+        "crop_cycles": [
+            {
+                "field": "id",
+                "type": "bigint(20)",
+                "null": "NO",
+                "key": "PRI",
+                "default": null
+            },
+            {
+                "field": "sowing_id",
+                "type": "int(100)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "block",
+                "type": "varchar(250)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "plot",
+                "type": "varchar(200)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "seed_id",
+                "type": "int(100)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "start_date",
+                "type": "date",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "closed_date",
+                "type": "date",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "harvest_date",
+                "type": "date",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "harvest_id",
+                "type": "int(100)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "status",
+                "type": "enum('Active','Closed')",
+                "null": "YES",
+                "key": "",
+                "default": "Active"
+            },
+            {
+                "field": "yield_mt",
+                "type": "decimal(10,2)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "remarks",
+                "type": "text",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "site_id",
+                "type": "bigint(20)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "user_id",
+                "type": "int(100)",
+                "null": "NO",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "season_id",
+                "type": "int(100)",
+                "null": "YES",
+                "key": "",
+                "default": null
+            },
+            {
+                "field": "created_at",
+                "type": "timestamp",
+                "null": "NO",
+                "key": "",
+                "default": "current_timestamp()"
+            },
+            {
+                "field": "updated_at",
+                "type": "timestamp",
+                "null": "NO",
+                "key": "",
+                "default": "current_timestamp()"
+            }
+        ]
+    },
+    "crop_related_tables": [
+        "crop_cycles",
+        "crop_protection"
+    ],
+    "seed_related_tables": [
+        "master_seed",
+        "seed",
+        "seed_stock_history"
+    ]
+}
