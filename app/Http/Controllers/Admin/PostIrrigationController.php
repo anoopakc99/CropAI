@@ -67,6 +67,7 @@ class PostIrrigationController extends Controller
             ->leftJoin('manpower_type', 'post_irrigation.manpower_type', '=', 'manpower_type.id')
             ->select(
                 'post_irrigation.id',
+                 'post_irrigation.crop_id',
                 'post_irrigation.block_name',
                 'post_irrigation.total_cost',
                 'post_irrigation.plot_name',

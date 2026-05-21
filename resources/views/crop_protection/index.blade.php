@@ -520,6 +520,7 @@
                     <th>Area (Acre)</th>
                      <th>Area Covered (Acre)</th>
                      <th>Manual Season</th>
+                     <th>Seed Name</th>
                     <th>Machine Used</th>
                     <th>Tractor Used</th>
                     <th>HSD Consumption (Ltr)</th>
@@ -570,6 +571,12 @@
                         <td>{{ $row->area }}</td>
                         <td>{{ $row->area_covered }}</td>
                         <td>{{ trim((string)($row->season_name ?? '')) ?: (trim((string)($row->manual_season ?? '')) ?: (trim((string)($row->manual_session ?? '')) ?: '--')) }}</td>
+                        <td>
+                            @php
+                                $seedName = \Illuminate\Support\Facades\DB::table('seed')->where('id', $row->crop_id)->value('name');
+                            @endphp
+                            {{ $seedName ?? '--' }}
+                        </td>
                         {{-- Machine --}}
                         <td>
                             @php

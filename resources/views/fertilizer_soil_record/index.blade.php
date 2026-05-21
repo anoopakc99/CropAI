@@ -565,6 +565,8 @@
                 <th>Area (Acre)</th>
                 <th>Area Covered (Acre)</th>
                 <th>Manual Season</th>
+                
+                <th>Seed Name</th>
                 <th>Application Type</th>
                 <th>Fertilizer Name</th>
                 <th>Fertilizer Used</th>
@@ -591,6 +593,12 @@
                     <td>{{ $record->area }}</td>
                     <td>{{ $record->area_covered }}</td>
                     <td>{{ trim((string)($record->season_name ?? '')) ?: (trim((string)($record->manual_season ?? '')) ?: (trim((string)($record->manual_session ?? '')) ?: '--')) }}</td>
+                    <td>
+                        @php
+                            $seedName = DB::table('seed')->where('id', $record->crop_id)->value('name');
+                        @endphp
+                        {{ $seedName ?? '--' }}
+                    </td>
                     <td>{{ $record->activity_type }}</td>
 
                     {{-- Fertilizer Name Display --}}

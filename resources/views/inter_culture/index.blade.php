@@ -493,6 +493,7 @@
                 <th>Area (Acre)</th>
                 <th>Area Covered (Acre)</th>
                 <th>Manual Season</th>
+                <th>Seed Name</th>
                 <th>Date of Activity</th>
                 <th>Machine Used</th>
                 <th>Tractor Used</th>
@@ -521,6 +522,12 @@
                         <td>{{ $row->area ?? 0 }}</td> {{-- Changed 'N/A' to 0 --}}
                         <td>{{ $row->area_covered ?? 0 }}</td> {{-- Changed 'N/A' to 0 --}}
                         <td>{{ trim((string)($row->season_name ?? '')) ?: (trim((string)($row->manual_season ?? '')) ?: (trim((string)($row->manual_session ?? '')) ?: '--')) }}</td>
+                        <td>
+                            @php
+                                $seedName = \Illuminate\Support\Facades\DB::table('seed')->where('id', $row->crop_id)->value('name');
+                            @endphp
+                            {{ $seedName ?? '--' }}
+                        </td>
                         <td>{{ \Carbon\Carbon::parse($row->date)->format('d-m-Y') ?? '--' }}</td>
                         <td>{{ $getNamesFromIds($row->machine_id, $machines) }}</td>
                         <td>{{ $getNamesFromIds($row->tractor_id, $tractors) }}</td>

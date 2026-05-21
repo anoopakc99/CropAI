@@ -512,6 +512,7 @@
             <th>Area (Acre)</th>
             <th>Area Covered (Acre)</th>
             <th>Manual Season</th>
+            <th>Seed Name</th>
             <th>Activity Stage</th>
             <th>Leaf Color & Condition</th> <!-- Used "&" for better readability -->
             <th>Captured Image</th>
@@ -552,6 +553,12 @@
                     <td>{{ $activity->area }}</td>
                     <td>{{ $activity->area_covered }}</td>
                     <td>{{ trim((string)($activity->season_name ?? '')) ?: (trim((string)($activity->manual_season ?? '')) ?: (trim((string)($activity->manual_session ?? '')) ?: '--')) }}</td>
+                    <td>
+                        @php
+                            $seedName = \Illuminate\Support\Facades\DB::table('seed')->where('id', $activity->crop_id)->value('name');
+                        @endphp
+                        {{ $seedName ?? '--' }}
+                    </td>
                     <td>{{ $activity->activity_stage }}</td>
                     <td>{{ $activity->leaf_condition }}</td>
                     <td>

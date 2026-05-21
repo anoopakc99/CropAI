@@ -500,6 +500,7 @@
             <th>Area (Acre)</th>
             <th>Area Covered (Acre)</th>
             <th>Manual Season</th>
+            <th>Seed Name</th>
             <th>Soil Condition</th>
             <th>Machine Used</th>
             <th>Tractor Used</th>
@@ -525,6 +526,12 @@
                     <td>{{ $row->area }}</td>
                     <td>{{ $row->area_covered }}</td>
                     <td>{{ trim((string)($row->season_name ?? '')) ?: (trim((string)($row->manual_season ?? '')) ?: (trim((string)($row->manual_session ?? '')) ?: '--')) }}</td>
+                    <td>
+                        @php
+                            $seedName = DB::table('seed')->where('id', $row->crop_id)->value('name');
+                        @endphp
+                        {{ $seedName ?? '--' }}
+                    </td>
                     <td>{{ $row->soil_condition }}</td>
                     <td>
                         <div class="badge-container">

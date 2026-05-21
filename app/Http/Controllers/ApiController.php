@@ -3758,7 +3758,7 @@ foreach ($seedStocks as $stock) {
                 ->where('plot_id', $request->plot_name)
                 ->whereDate('start_date', '<=', $entryDate)
                 ->whereDate('end_date', '>=', $entryDate)
-                ->where('site_id',$siteName)
+                ->where('site_id', $siteIdToStore)
                 ->first();
 
             // Insert into crop_protection table

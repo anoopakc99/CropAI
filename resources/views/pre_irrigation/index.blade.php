@@ -501,6 +501,7 @@
                 <th>Area (Acre)</th>
                 <th>Area Covered (Acre)</th>
                 <th>Manual Season</th>
+                <th>Seed Name</th>
                 <th>Irrigation No.</th>
                 <th>Irrigation Date</th>
                 <th>Source of Water</th>
@@ -525,6 +526,12 @@
                     <td>{{ $row->area }}</td>
                     <td>{{ round($row->area_covered) }}</td>
                     <td>{{ trim((string)($row->season_name ?? '')) ?: (trim((string)($row->manual_season ?? '')) ?: (trim((string)($row->manual_session ?? '')) ?: '--')) }}</td>
+                    <td>
+                        @php
+                            $seedName = DB::table('seed')->where('id', $row->crop_id)->value('name');
+                        @endphp
+                        {{ $seedName ?? '--' }}
+                    </td>
                     <td>{{ $row->irrigation_no }}</td>
                     <td>{{ \Carbon\Carbon::parse($row->date)->format('d-m-Y') }}</td>
                     <td>{{ $row->source_of_water  }}</td>
